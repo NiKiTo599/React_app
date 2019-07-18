@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import WeatherDisplay from './Weather/WeatherDisplay';
 import ButtonsOfCities from './ButtonsOfCities';
+import "../node_modules/slick-carousel/slick/slick.css";
+import "../node_modules/slick-carousel/slick/slick-theme.css";
+
+import './styles/style';
 
 const PLACES = [
   { "name": "Zhodino", "lat": 54.09, "lon": 28.33 },

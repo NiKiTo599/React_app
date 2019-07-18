@@ -1,0 +1,34 @@
+$color-for-bg: #fff;
+$color-for-button: #cf2836;
+
+body {
+  background-color: $color-for-bg;
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  #root {
+    width: 100%;
+    background-color: $color-for-bg;
+    display: flex;
+    justify-content: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    .menu-cities {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+
+      .menu-cities__button {
+        font-size: 1.3rem;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        margin: 1rem;
+        width: 9rem;
+        height: 3rem;
+        background-color: $color-for-button;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+
+.container-main {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .container-main__title {
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .container-main__slider {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80rem;;
+    align-items: center;
+    justify-content: center;
+
+    .container-weather {
+      width: 20rem !important;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: #e76d6d;
+      border-radius: 10%;
+      margin: 2rem;
+    }
+  }
+}
