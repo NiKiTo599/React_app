@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import WeatherDisplay from './Weather/WeatherDisplay';
+import ButtonsOfCities from './ButtonsOfCities';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const PLACES = [
+  { "name": "Zhodino", "lat": 54.09, "lon": 28.33 },
+  { "name": "Svetlogorsk", "lat": 61.11, "lon": 28.86 },
+  { "name": "Minsk", "lat": 53.9, "lon": 27.56 },
+  { "name": "Lahoysk", "lat": 54.2, "lon": 27.85 }
+];
+
+class App extends Component {
+  state = {
+    activePlace: 0,
+  }; 
+
+  render() {
+    const { activePlace } = this.state;
+    return (
+      <>
+        <div>
+          <ButtonsOfCities places={PLACES} context={this}/>
+          <WeatherDisplay key={activePlace} name={PLACES[activePlace].name} lat={PLACES[activePlace].lat} lon={PLACES[activePlace].lon} />
+        </div>
+      </>
+    );
+  }
 }
-
 export default App;
